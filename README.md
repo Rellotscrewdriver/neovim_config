@@ -1,12 +1,14 @@
 # Introduction
 
-This repo hosts my neovim configuration for Linux `init.lua` is the config entry point for neovim
+This is my personal neovim configuration for Linux with various plugins configured. it evolves as I learn more about neovim and become more proficient in using neovim. <br />
+I wouldn't recommend cloning this repo and replace your own config, especially on other platforms since some configs for only for linux! <br />
+Good configurations are personal, built over time with a lot of polish.
 
 # Install and setup
 
-See [doc here](docs/README.md) on how to install Nvim's dependencies, Nvim itself,
-and how to set up on different platforms (Linux, macOS, and Windows).
+Just run install.sh to install it on linux(untested on other platforms)
 
 # Plugins
 
 + Plugin management via [Packer.nvim](https://github.com/wbthomason/packer.nvim).
+

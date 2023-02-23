@@ -1,0 +1,179 @@
+This is used for Future Planning and Prototyping
+
+* replace todo-comments with org-mode as having TODOs in one file is better than having it all over the code
+* install ONLY REQUIRED PLUGINS for EVERDAY USE, unused plugins must be eradicated 
+* create examples to quickly test nvim or plugin feature
+* create a .sh script that automatically do file operations(like copying and pasting files back and forth)
+* fully integrated git(maybe use fugitive)
+* icons must be based around VScode design or close to it.
+* directory structure should be easy to read and maintain
+
+Directory Structure:
+~/.config/nvim
+|-- lua/
+|  |-- plugin-user-config.lua
+|-- init.lua
+
+start menu rough design
+
+------------------------------------------------------------------------------------
+file      |                                                                        |
+explorer  |                                                                        |
+          |                                                                        |
+          |                                                                        |
+          |                                                                        |
+          |                   logo on center of the window                         | 
+          |                            "rellot's                                   | 
+          |                           screwdriver                                  | 
+          |                           build version and date"                      | 
+          |                                                                        | 
+          |                         restore last session   r                       | 
+          |                         new file               n                       | 
+          |                         open file                                      |
+          |                         recent files                                   |
+          |                                                                        | 
+          |                                                                        | 
+          |                                                                        | 
+          |                         exit neovim            q                       | 
+          |                                                                        |         
+          |                                                                        | 
+          |                                                                        |
+          |                                                                        |     
+          |  random quote or jokes from startify(possible with alpha plugin)       | 
+          |  "why eggs can't make jokes?"                                          | 
+          |  "because they get cracked"                                            | 
+          |------------------------------------------------------------------------|
+          | status line here                                                       | 
+-----------------------------------------------------------------------------------|
+
+
+coding interface
+
+------------------------------------------------------------------------------------
+file      |buffers                                                     |
+explorer  |------------------------------------------------------------|
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |                  
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            | 
+          |-------------------------------------------------------------------------
+          | status line here
+------------------------------------------------------------------------------------
+
+GTEST interface
+------------------------------------------------------------------------------------
+file      |buffers                                                     |
+explorer  |------------------------------------------------------------|
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |                  
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            | 
+          |-------------------------------------------------------------------------
+          | status line here
+------------------------------------------------------------------------------------
+
+DEBUGGING interface
+------------------------------------------------------------------------------------
+file      |buffers                                                     |
+explorer  |------------------------------------------------------------|
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |                  
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            | 
+          |-------------------------------------------------------------------------
+          | status line here
+------------------------------------------------------------------------------------
+
+CMAKE interface
+------------------------------------------------------------------------------------
+file      |buffers                                                     |
+explorer  |------------------------------------------------------------|
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |                  
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            |
+          |                                                            | 
+          |-------------------------------------------------------------------------
+          | status line here
+------------------------------------------------------------------------------------
+
+
