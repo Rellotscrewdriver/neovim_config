@@ -10,9 +10,26 @@ This is used for Future Planning and Prototyping
 
 Directory Structure:
 ~/.config/nvim
-|-- lua/
+|-- configPlug/
 |  |-- plugin-user-config.lua
+|-- core/
+|  |-- autocommands.lua
+|  |-- mappings.lua
+|  |-- colorschemes.lua
+|  |-- settings.lua
+|  |-- icons.lua
+|-- snippets/
+|  |-- cpp.snippets
+|  |-- python.snippets
+|  |-- make.snippets
+|  |-- cmake.snippets
+|  |-- gtest.snippets
 |-- init.lua
+|-- install.sh
+
+Plugins to install:
+
+
 
 start menu rough design
 
