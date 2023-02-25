@@ -1,6 +1,4 @@
---this file is the starting entry of my neovim configuration
-
---sourcing configs
+--starting entry
 local confPlug_files = {
   "completion.lua",
 }
@@ -9,7 +7,6 @@ local confcore_files = {
   "settings.lua",
 }
 
---function to source all the files
 local source_files = function(conf_table, conf_path)
   for _, name in ipairs(conf_table) do
     local path = string.format(conf_path, vim.fn.stdpath("config"), name)
@@ -18,7 +15,6 @@ local source_files = function(conf_table, conf_path)
   end
 end
 
---"""Installing Packages in a floating window"""
 require('packer').startup({function()
   -- plugins here
   use 'wbthomason/packer.nvim'
@@ -34,6 +30,12 @@ require('packer').startup({function()
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
   --use 'rafamadriz/friendly-snippets' --collection of snippets
+  use {'nvim-treesitter/nvim-treesitter',
+        run = function()
+            require('nvim-treesitter.install').update({ with_sync = true })
+        end,
+      }
+  
 end,
 config = {
   display = {
@@ -41,6 +43,5 @@ config = {
   }
 }})
 
---"""Source Configurations"""
 source_files(confPlug_files, "%s/configPlug/%s")
 source_files(confcore_files, "%s/core/%s")
