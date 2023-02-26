@@ -29,13 +29,26 @@ require('packer').startup({function()
   use 'onsails/lspkind.nvim'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
-  --use 'rafamadriz/friendly-snippets' --collection of snippets
+
+  --use {'phaazon/mind.nvim', branch = 'v2.2', requires = 'nvim-lua/plenary.nvim'}
+  use 'akinsho/toggleterm.nvim'
+  use 'nvim-orgmode/orgmode'
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+  use {'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = 'nvim-lua/plenary.nvim'}
+  use {'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim'}
+  use 'Shatur/neovim-cmake'
+  use 'goolord/alpha-nvim'
+  use 'mhinz/vim-startify'
+  use 'andweeb/presence.nvim'
+  use {'glepnir/galaxyline.nvim', branch = 'main', requires = { 'nvim-tree/nvim-web-devicons'}}
+  use 'windwp/nvim-autopairs'
+  use {"p00f/nvim-ts-rainbow", after = "nvim-treesitter" }
   use {'nvim-treesitter/nvim-treesitter',
         run = function()
-            require('nvim-treesitter.install').update({ with_sync = true })
+            -- it requires to update in order to work for the first time
+            require('nvim-treesitter.install').update({ with_sync = true }) 
         end,
       }
-  
 end,
 config = {
   display = {
