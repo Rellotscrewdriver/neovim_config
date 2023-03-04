@@ -1,10 +1,14 @@
 --starting entry
 local confPlug_files = {
   "completion.lua",
+  "git.lua",
+  "terminal.lua",
 }
 
 local confcore_files = {
   "settings.lua",
+  "mappings.lua",
+  "autocommands.lua",
 }
 
 local source_files = function(conf_table, conf_path)
@@ -38,7 +42,9 @@ require('packer').startup({function()
   use {'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim'}
   use 'Shatur/neovim-cmake'
   use 'goolord/alpha-nvim'
-  use 'mhinz/vim-startify'
+  --git 
+  use 'lewis6991/gitsigns.nvim'
+  use {"nvim-neo-tree/neo-tree.nvim", branch = "v2.x", requires = {"nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim",}}
   use 'andweeb/presence.nvim'
   use {'glepnir/galaxyline.nvim', branch = 'main', requires = { 'nvim-tree/nvim-web-devicons'}}
   use 'windwp/nvim-autopairs'
