@@ -15,6 +15,7 @@ local confPlug_files = {
   "completion.lua",
   "bufferline.lua",
   "neo-tree.lua",
+  "discord.lua",
   "git.lua",
   "terminal.lua",
 }
