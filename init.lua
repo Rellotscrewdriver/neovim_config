@@ -22,6 +22,7 @@ end
 require('packer').startup({function()
   -- plugins here
   use 'wbthomason/packer.nvim'
+
   --autocompletion
   use 'hrsh7th/nvim-cmp'
   use 'neovim/nvim-lspconfig'
@@ -42,8 +43,13 @@ require('packer').startup({function()
   use {'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim'}
   use 'Shatur/neovim-cmake'
   use 'goolord/alpha-nvim'
+  use 'lewis6991/impatient.nvim'
   --git 
   use 'lewis6991/gitsigns.nvim'
+  use 'rcarriga/nvim-notify'
+  use 'dstein64/vim-startuptime'
+  --use 'mhinz/vim-startify'
+  use {"stevearc/aerial.nvim"}
   use {"nvim-neo-tree/neo-tree.nvim", branch = "v2.x", requires = {"nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim",}}
   use 'andweeb/presence.nvim'
   use {'glepnir/galaxyline.nvim', branch = 'main', requires = { 'nvim-tree/nvim-web-devicons'}}
