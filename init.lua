@@ -11,7 +11,10 @@ _G.__luacache_config = {
 require('impatient')
 --starting entry
 local confPlug_files = {
+  "outline.lua",
   "completion.lua",
+  "bufferline.lua",
+  "neo-tree.lua",
   "git.lua",
   "terminal.lua",
 }
