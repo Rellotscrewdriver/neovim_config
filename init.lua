@@ -11,6 +11,7 @@ _G.__luacache_config = {
 require('impatient')
 --starting entry
 local confPlug_files = {
+  "theme.lua",
   "outline.lua",
   "completion.lua",
   "bufferline.lua",
@@ -63,12 +64,13 @@ require('packer').startup({function()
   use 'lewis6991/gitsigns.nvim'
   use 'rcarriga/nvim-notify'
   use 'dstein64/vim-startuptime'
-  --use 'mhinz/vim-startify'
   use {"stevearc/aerial.nvim"}
   use {"nvim-neo-tree/neo-tree.nvim", branch = "v2.x", requires = {"nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim",}}
   use 'andweeb/presence.nvim'
   use {'glepnir/galaxyline.nvim', branch = 'main', requires = { 'nvim-tree/nvim-web-devicons'}}
   use 'windwp/nvim-autopairs'
+  -- Themes
+  use { "catppuccin/nvim", as = "catppuccin" }
   use {"p00f/nvim-ts-rainbow", after = "nvim-treesitter" }
   use {'nvim-treesitter/nvim-treesitter',
         run = function()
