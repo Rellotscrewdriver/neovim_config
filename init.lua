@@ -15,6 +15,7 @@ local confPlug_files = {
   "outline.lua",
   "completion.lua",
   "bufferline.lua",
+  "dashboard.lua",
   "neo-tree.lua",
   "discord.lua",
   "git.lua",
@@ -71,6 +72,7 @@ require('packer').startup({function()
   use 'windwp/nvim-autopairs'
   -- Themes
   use { "catppuccin/nvim", as = "catppuccin" }
+  use 'mrjones2014/smart-splits.nvim'
   use {"p00f/nvim-ts-rainbow", after = "nvim-treesitter" }
   use {'nvim-treesitter/nvim-treesitter',
         run = function()

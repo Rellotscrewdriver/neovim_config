@@ -196,4 +196,4 @@ require("neo-tree").setup({
         }
       })
 
-      vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
+require('smart-splits').setup()

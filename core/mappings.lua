@@ -1,0 +1,16 @@
+local keymap = vim.api.nvim_set_keymap
+local default_opts = { noremap = true, silent = true }
+keymap("n", "<S-h>", ":bprevious<CR>", default_opts)
+keymap("n", "<S-l>", ":bnext<CR>", default_opts)
+keymap("n", "b", ":Telescope buffers<CR>", default_opts)
+keymap("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>", default_opts)
+vim.keymap.set('n', '<C-h>', require('smart-splits').move_cursor_left)
+vim.keymap.set('n', '<C-j>', require('smart-splits').move_cursor_down)
+vim.keymap.set('n', '<C-k>', require('smart-splits').move_cursor_up)
+vim.keymap.set('n', '<C-l>', require('smart-splits').move_cursor_right)
+vim.keymap.set('n', '<C-Up>', require('smart-splits').resize_left)
+vim.keymap.set('n', '<C-Down>', require('smart-splits').resize_down)
+vim.keymap.set('n', '<C-Left>', require('smart-splits').resize_up)
+vim.keymap.set('n', '<C-Right>', require('smart-splits').resize_right)
+vim.cmd([[nnoremap f :Neotree reveal<cr>]])
+keymap("n", "qa", ":qa!<CR>", default_opts)
