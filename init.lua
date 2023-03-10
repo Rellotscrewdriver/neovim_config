@@ -17,9 +17,11 @@ local confPlug_files = {
   "window.lua",
   "dashboard.lua",
   "explorer.lua",
+  "statusline.lua",
   "discord.lua",
   "git.lua",
   "terminal.lua",
+  "misc.lua"
 }
 
 local confcore_files = {
@@ -73,7 +75,10 @@ require('packer').startup({function()
   use 'windwp/nvim-autopairs'
   -- Themes
   use { "catppuccin/nvim", as = "catppuccin" }
+  use 'numToStr/Comment.nvim'
   use 'mrjones2014/smart-splits.nvim'
+  use 'famiu/bufdelete.nvim'
+  use "ahmedkhalf/project.nvim"
   use {"p00f/nvim-ts-rainbow", after = "nvim-treesitter" }
   use {'nvim-treesitter/nvim-treesitter',
         run = function()
