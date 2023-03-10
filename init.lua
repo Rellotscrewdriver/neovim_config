@@ -51,6 +51,7 @@ require('packer').startup({function()
   use 'onsails/lspkind.nvim'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
+  use 'jose-elias-alvarez/null-ls.nvim'
 
   --use {'phaazon/mind.nvim', branch = 'v2.2', requires = 'nvim-lua/plenary.nvim'}
   use 'akinsho/toggleterm.nvim'
