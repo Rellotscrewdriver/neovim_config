@@ -12,11 +12,11 @@ require('impatient')
 --starting entry
 local confPlug_files = {
   "theme.lua",
-  "outline.lua",
+  "symbols.lua",
   "completion.lua",
-  "bufferline.lua",
+  "window.lua",
   "dashboard.lua",
-  "neo-tree.lua",
+  "explorer.lua",
   "discord.lua",
   "git.lua",
   "terminal.lua",

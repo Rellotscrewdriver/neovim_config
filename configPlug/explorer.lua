@@ -196,4 +196,3 @@ require("neo-tree").setup({
         }
       })
 
-require('smart-splits').setup()
