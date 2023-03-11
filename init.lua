@@ -64,6 +64,7 @@ require('packer').startup({function()
   use 'Shatur/neovim-cmake'
   use 'goolord/alpha-nvim'
   use 'lewis6991/impatient.nvim'
+  use 'Civitasv/cmake-tools.nvim'
   --git 
   use 'lewis6991/gitsigns.nvim'
   use 'rcarriga/nvim-notify'

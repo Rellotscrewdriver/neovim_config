@@ -85,7 +85,7 @@ local buttons = {
     button("r", "  Recents                         ", ":Telescope oldfiles<CR>"),
     button("f", "  Search                          ", ":Telescope find_files<CR>"),
     button("e", "  Create                          ", ":ene <BAR> startinsert<CR>"),
-    --button("w", "  Projects                          ", ""),
+    button("w", "󰘦  Projects                        ", "<cmd>lua require'telescope'.extensions.projects.projects{}<CR>"),
     button("p", "  Update                          ", ":PackerSync<CR>"),
     button("s", "  Settings                        " , ":e ~/.config/nvim/<CR>"),
     button("q", "  Quit Neovim                     ", ":qa!<CR>"),
