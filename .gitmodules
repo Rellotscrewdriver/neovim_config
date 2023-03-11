@@ -1,0 +1,9 @@
+[submodule "Examples/Gtest Example/extlibs/googletest"]
+	path = Examples/Gtest Example/extlibs/googletest
+	url = https://github.com/google/googletest
+[submodule "Examples/Cmake Example/Digital-Measurement-Calculator"]
+	path = Examples/Cmake Example/Digital-Measurement-Calculator
+	url = https://github.com/Rellotscrewdriver/Digital-Measurement-Calculator.git
+[submodule "Examples/Extlibs Example/extlibs/terminal-table"]
+	path = Examples/Extlibs Example/extlibs/terminal-table
+	url = https://github.com/Phidelux/terminal-table
