@@ -61,7 +61,6 @@ require('packer').startup({function()
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
   use {'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = 'nvim-lua/plenary.nvim'}
   use {'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim'}
-  use 'Shatur/neovim-cmake'
   use 'goolord/alpha-nvim'
   use 'lewis6991/impatient.nvim'
   use 'Civitasv/cmake-tools.nvim'
