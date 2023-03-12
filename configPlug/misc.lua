@@ -1,3 +1,18 @@
+vim.notify = require("notify")
+
+require("notify").setup{
+  stages = "slide",
+  render = "compact",
+  fps = 60,
+  icons = {
+    ERROR = "",
+    WARN = "",
+    INFO = "",
+    DEBUG = "",
+    TRACE = "✎",
+  },
+}
+
 require('orgmode').setup_ts_grammar()
 
 require('orgmode').setup({
