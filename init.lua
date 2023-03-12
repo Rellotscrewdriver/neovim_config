@@ -68,7 +68,7 @@ require('packer').startup({function()
   use 'lewis6991/gitsigns.nvim'
   use 'rcarriga/nvim-notify'
   use 'dstein64/vim-startuptime'
-  use {"stevearc/aerial.nvim"}
+  use 'simrat39/symbols-outline.nvim'
   use {"nvim-neo-tree/neo-tree.nvim", branch = "v2.x", requires = {"nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim",}}
   use 'andweeb/presence.nvim'
   use {'glepnir/galaxyline.nvim', branch = 'main', requires = { 'nvim-tree/nvim-web-devicons'}}
