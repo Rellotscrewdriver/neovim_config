@@ -155,6 +155,5 @@ null_ls.setup({
     sources = {
         null_ls.builtins.completion.spell,
         null_ls.builtins.diagnostics.clang_check,
-        null_ls.builtins.diagnostics.cppcheck,
     },
 })
