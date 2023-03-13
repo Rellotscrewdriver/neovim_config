@@ -57,7 +57,6 @@ require('packer').startup({function()
 
   --use {'phaazon/mind.nvim', branch = 'v2.2', requires = 'nvim-lua/plenary.nvim'}
   use 'akinsho/toggleterm.nvim'
-  use 'nvim-orgmode/orgmode'
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
   use {'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = 'nvim-lua/plenary.nvim'}
   use {'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim'}
@@ -69,6 +68,7 @@ require('packer').startup({function()
   use 'rcarriga/nvim-notify'
   use 'dstein64/vim-startuptime'
   use 'simrat39/symbols-outline.nvim'
+  use 'vimwiki/vimwiki'
   use {"nvim-neo-tree/neo-tree.nvim", branch = "v2.x", requires = {"nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim",}}
   use 'andweeb/presence.nvim'
   use {'glepnir/galaxyline.nvim', branch = 'main', requires = { 'nvim-tree/nvim-web-devicons'}}
