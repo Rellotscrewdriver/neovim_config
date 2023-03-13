@@ -1,5 +1,5 @@
 vim.opt.number = true
-vim.cmd[[colorscheme catppuccin-frappe]]
+vim.cmd[[colorscheme catppuccin-mocha]]
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
