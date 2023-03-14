@@ -17,6 +17,7 @@ local confPlug_files = {
   "window.lua",
   "dashboard.lua",
   "explorer.lua",
+  "code_runner.lua",
   "statusline.lua",
   "discord.lua",
   "git.lua",
