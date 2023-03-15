@@ -2,8 +2,8 @@
 #include <vector>
 #include <string>
 
-#include "table.h"
-#include "style.h"
+#include "extlibs/terminal-table/src/table.h"
+#include "extlibs/terminal-table/src/style.h"
 
 namespace termtab = bornageek::utils::termtab;
 
