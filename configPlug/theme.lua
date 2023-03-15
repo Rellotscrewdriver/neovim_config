@@ -6,7 +6,7 @@ require("catppuccin").setup({
     },
     transparent_background = false,
     show_end_of_buffer = false, -- show the '~' characters after the end of buffers
-    term_colors = false,
+    term_colors = true,
     dim_inactive = {
         enabled = false,
         shade = "dark",
@@ -16,7 +16,7 @@ require("catppuccin").setup({
     no_bold = false, -- Force no bold
     styles = {
         comments = { "italic" },
-        conditionals = { "italic" },
+        conditionals = {},
         loops = {},
         functions = {},
         keywords = {},
@@ -35,8 +35,8 @@ require("catppuccin").setup({
         gitsigns = true,
         nvimtree = true,
         telescope = true,
-        notify = false,
-        mini = false,
+        notify = true,
+        symbols_outline = true,
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
 })
