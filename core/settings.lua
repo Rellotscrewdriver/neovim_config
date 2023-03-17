@@ -10,3 +10,4 @@ vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 vim.o.updatetime = 300
 vim.o.incsearch = false
 vim.wo.signcolumn = 'yes'
+vim.cmd([[set ttyfast]])
