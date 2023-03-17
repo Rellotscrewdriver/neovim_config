@@ -1,4 +1,17 @@
+local c = require("catppuccin.palettes").get_palette "mocha"
 require('bufferline').setup {
+  highlights = require("catppuccin.groups.integrations.bufferline").get {
+  styles = {},
+  custom = {
+    mocha = {
+      buffer_selected = { fg = c.text, bg = c.base, bold = false, italic = false },
+      tab_close = { fg = c.surface1, bg = c.mantle, bold = false, italic = false },
+      close_button = { fg = c.surface1, bg = c.mantle, bold = false, italic = false },
+      close_button_visible = { fg = c.surface1, bg = c.mantle, bold = false, italic = false },
+      close_button_selected = { fg = c.surface1, bg = c.base, bold = false, italic = false },
+      },
+    },
+  },
   options = {
     mode = "buffers", -- set to "tabs" to only show tabpages instead
     numbers = "none",
@@ -49,7 +62,6 @@ require('bufferline').setup {
     show_tab_indicators = true,
     show_duplicate_prefix = true, -- whether to show duplicate buffer prefix
     persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
-    separator_style = "slope",--"slant",-- | "slope" | "thick" | "thin" | { 'any', 'any' },
     enforce_regular_tabs = true,
     always_show_bufferline = true,
   }
