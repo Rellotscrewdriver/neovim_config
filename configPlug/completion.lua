@@ -27,27 +27,27 @@ require('lspkind').init({
     --
     -- default: {}
     symbol_map = {
-      Method = "",
-      Function = "",
-      Constructor = "",
+      Method = " ",
+      Function = " ",
+      Constructor = " ",
       Field = "ﰠ",
-      Class = "ﴯ",
+      Class = " ",
       Interface = "",
-      Module = "",
+      Module = " ",
       Property = "ﰠ",
-      Unit = "塞",
-      Value = "",
-      Enum = "",
-      Keyword = "",
-      Snippet = "",
-      Color = "",
-      File = "",
-      Reference = "",
+      Unit = "",
+      Value = " ",
+      Enum = " ",
+      Keyword = " ",
+      Snippet = " ",
+      Color = " ",
+      File = " ",
+      Reference = " ",
       EnumMember = "",
-      Constant = "",
-      Struct = "פּ",
+      Constant = " ",
+      Struct = " ",
       Event = "",
-      Operator = "",
+      Operator = "",
     },
 })
 
@@ -94,7 +94,6 @@ cmp.setup({
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
       { name = 'luasnip' },
-      { name = 'orgmode' },
     }, {
       { name = 'buffer' },
     })
@@ -146,7 +145,6 @@ require('nvim-treesitter.configs').setup {
     -- code block highlights that do not have ts grammar
     additional_vim_regex_highlighting = {'org'},
   },
-  ensure_installed = {'org'}, -- Or run :TSUpdate org
 }
 
 local null_ls = require("null-ls")

@@ -21,7 +21,7 @@ local header = {
   },
   opts = {
     position = "center",
-    hl = "Comment",
+    hl = "Function",
   },
 }
 
@@ -82,12 +82,12 @@ local buttons = {
   type = "group",
   val = {
     button("s", "  Restore                         ", ":SessionManager load_last_session<CR>"),
-    button("r", "  Recents                         ", ":Telescope oldfiles<CR>"),
-    button("f", "  Search                          ", ":Telescope find_files<CR>"),
-    button("e", "  Create                          ", ":ene <BAR> startinsert<CR>"),
-    button("w", "󰘦  Projects                        ", "<cmd>lua require'telescope'.extensions.projects.projects{}<CR>"),
-    button("p", "  Update                          ", ":PackerSync<CR>"),
-    button("s", "  Settings                        " , ":e ~/.config/nvim/<CR>"),
+    button("r", "  Recents                         ", ":Telescope oldfiles<CR>"),
+    button("f", "  Search                          ", ":Telescope find_files<CR>"),
+    button("e", "  Create                          ", ":ene <BAR> startinsert<CR>"),
+    button("w", "  Projects                        ", "<cmd>lua require'telescope'.extensions.projects.projects{}<CR>"),
+    button("p", "  Update                          ", ":PackerSync<CR>"),
+    button("s", "  Settings                        " , ":e ~/.config/nvim/<CR>"),
     button("q", "  Quit Neovim                     ", ":qa!<CR>"),
   },
   opts = {
@@ -128,6 +128,7 @@ local PlugStats = {
   val = stats,
   opts = {
     position = "center",
+    hl = "Function",
   },
 }
 
