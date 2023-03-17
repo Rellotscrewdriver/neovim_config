@@ -35,17 +35,11 @@ aand many more!(you can just look at init.lua to see all the plugins)
 
 
 # UI Demo
-<details><summary><b>UI Demos</b></summary>
+<details><summary><b>UI Demos(will eat a lot of CPU)</b></summary>
 
 For more UI demos, check [here](https://github.com/Rellotscrewdriver/nvim/issues/1).
 
-## Start screen with dashboard-nvim
-
-<p align="center">
-<img src="" width="800">
-</p>
-
-## File fuzzy finding using LeaderF
+## Start screen with alpha-nvim
 
 <p align="center">
 <img src="" width="800">
@@ -57,27 +51,7 @@ For more UI demos, check [here](https://github.com/Rellotscrewdriver/nvim/issues
 <img src="" width="800">
 </p>
 
-## Git add, commit and push via fugitive.vim
-
-<p align="center">
-<img src="" width="800">
-</p>
-
-## Command-line autocompletion with wilder.nvim
-
-<p align="center">
-<img src="" width="800">
-</p>
-
-## Tags
-
-<p align="center">
-<img src="" width="800">
-</p>
-
-## Cursor jump via hop.nvim
-
-Go to a string starting with `se`
+## Tags with symbols-outline
 
 <p align="center">
 <img src="" width="800">
@@ -89,6 +63,7 @@ Go to a string starting with `se`
 <img src="" width="800">
 </p>
 
+</details>
 # Contributing
 
 If you find anything that needs improving, do not hesitate to point it out or create a PR.
