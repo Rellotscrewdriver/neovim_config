@@ -64,6 +64,7 @@ For more UI demos, check [here](https://github.com/Rellotscrewdriver/nvim/issues
 </p>
 
 </details>
+
 # Contributing
 
 If you find anything that needs improving, do not hesitate to point it out or create a PR.
@@ -73,10 +74,22 @@ If you still have an issue, [open a new issue](https://github.com/jdhao/nvim-con
 # Credits
 
 * [jdhao](https://github.com/jdhao/nvim-config) for inspiration to restart my neovim configuration from scratch
-
-
+* [dtr2300](https://github.com/dtr2300/nvim) 
+* [alpha2phi](https://github.com/alpha2phi/neovim-for-beginner) for some noob tips and recommendations
+* [Johan-Palacios](https://github.com/Johan-Palacios/nvim)
+* [emxxjnm](https://github.com/emxxjnm/nvim)
 
 # Further readings
-Some of the resources that I find helpful in mastering Nvim is documented [here]().
-
-
+https://github.com/rockerBOO/awesome-neovim
+https://this-week-in-neovim.org/
+https://github.com/nanotee/nvim-lua-guide
+https://www.lua.org/pil/contents.html
+https://www.lua.org/manual/5.1/manual.html
+https://learnxinyminutes.com/docs/lua/
+https://mkaz.blog/working-with-vim/
+https://madskjeldgaard.dk/posts/neovim-as-sc-ide/
+https://vim.fandom.com/wiki/Unused_keys
+https://www.reddit.com/r/neovim/
+https://github.com/ryanoasis/nerd-fonts
+https://github.com/jesseduffield/lazygit
+https://clangd.llvm.org/
