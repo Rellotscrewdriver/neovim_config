@@ -1,7 +1,7 @@
 # Introduction
 
 Hello! This is my personal neovim configuration for Linux with various plugins configured. it evolves as I learn more about neovim and become more proficient in using neovim. <br />
-I wouldn't recommend cloning this repo and replace your own config, especially on other platforms since some configs for only for linux! <br />
+I wouldn't recommend cloning this repo and replace your own config, especially on other platforms since <br />
 Good configurations are personal, built over time with a lot of polish.
 
 # Install and setup
@@ -69,7 +69,7 @@ For more UI demos, check [here](https://github.com/Rellotscrewdriver/nvim/issues
 
 If you find anything that needs improving, do not hesitate to point it out or create a PR.
 
-If you still have an issue, [open a new issue](https://github.com/jdhao/nvim-config/issues).
+If you still have an issue, [open a new issue](https://github.com/rellotscrewdriver/nvim/issues).
 
 # Credits
 
