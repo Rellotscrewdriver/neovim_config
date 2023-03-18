@@ -1,7 +1,7 @@
 # Introduction
 
 Hello! This is my personal neovim configuration for Linux with various plugins configured. it evolves as I learn more about neovim and become more proficient in using neovim. <br />
-I wouldn't recommend cloning this repo and replace your own config, especially on other platforms since <br />
+I wouldn't recommend cloning this repo and replace your own config, especially on other platforms since it is being made in mind with linux <br />
 Good configurations are personal, built over time with a lot of polish.
 
 # Install and setup
@@ -76,20 +76,23 @@ If you still have an issue, [open a new issue](https://github.com/rellotscrewdri
 * [jdhao](https://github.com/jdhao/nvim-config) for inspiration to restart my neovim configuration from scratch
 * [dtr2300](https://github.com/dtr2300/nvim) 
 * [alpha2phi](https://github.com/alpha2phi/neovim-for-beginner) for some noob tips and recommendations
+
+## Other Configs
+
 * [Johan-Palacios](https://github.com/Johan-Palacios/nvim)
 * [emxxjnm](https://github.com/emxxjnm/nvim)
 
 # Further readings
-https://github.com/rockerBOO/awesome-neovim
-https://this-week-in-neovim.org/
-https://github.com/nanotee/nvim-lua-guide
-https://www.lua.org/pil/contents.html
-https://www.lua.org/manual/5.1/manual.html
-https://learnxinyminutes.com/docs/lua/
-https://mkaz.blog/working-with-vim/
-https://madskjeldgaard.dk/posts/neovim-as-sc-ide/
-https://vim.fandom.com/wiki/Unused_keys
-https://www.reddit.com/r/neovim/
-https://github.com/ryanoasis/nerd-fonts
-https://github.com/jesseduffield/lazygit
-https://clangd.llvm.org/
+- https://github.com/rockerBOO/awesome-neovim
+- https://this-week-in-neovim.org/
+- https://github.com/nanotee/nvim-lua-guide
+- https://www.lua.org/pil/contents.html
+- https://www.lua.org/manual/5.1/manual.html
+- https://learnxinyminutes.com/docs/lua/
+- https://mkaz.blog/working-with-vim/
+- https://madskjeldgaard.dk/posts/neovim-as-sc-ide/
+- https://vim.fandom.com/wiki/Unused_keys
+- https://www.reddit.com/r/neovim/
+- https://github.com/ryanoasis/nerd-fonts
+- https://github.com/jesseduffield/lazygit
+- https://clangd.llvm.org/
