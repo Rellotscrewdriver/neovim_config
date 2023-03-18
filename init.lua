@@ -75,6 +75,7 @@ require('packer').startup({function()
   use {'glepnir/galaxyline.nvim', branch = 'main', requires = { 'nvim-tree/nvim-web-devicons'}}
   use 'windwp/nvim-autopairs'
   -- Themes
+  use "Shatur/neovim-session-manager"
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'numToStr/Comment.nvim'
   use 'mrjones2014/smart-splits.nvim'

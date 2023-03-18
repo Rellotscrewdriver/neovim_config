@@ -54,7 +54,7 @@ require("project_nvim").setup {
   -- telescope
   datapath = vim.fn.stdpath("data"),
 }
-require("dapui").setup()
+
 
 require('telescope').load_extension('projects')
 
