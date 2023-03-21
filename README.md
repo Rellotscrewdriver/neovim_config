@@ -76,7 +76,7 @@ If you still have an issue, [open a new issue](https://github.com/rellotscrewdri
 * [jdhao](https://github.com/jdhao/nvim-config) for inspiration to restart my neovim configuration from scratch
 * [dtr2300](https://github.com/dtr2300/nvim) 
 * [alpha2phi](https://github.com/alpha2phi/neovim-for-beginner) for some noob tips and recommendations
-
+* [Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch)
 ## Other Configs
 
 * [Johan-Palacios](https://github.com/Johan-Palacios/nvim)
