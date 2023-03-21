@@ -5,6 +5,8 @@ vim.keymap.set("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>")
 
 vim.keymap.set("n", "fd", ":lua require('bufdelete').bufdelete(0, true)<CR>")
 vim.keymap.set("n", "<F1>", ":SymbolsOutline<CR>")
+vim.keymap.set("n", "<leader>t", ":ToggleTerm<CR>")
+vim.keymap.set("n", "<leader>q", ":q!<CR>")
 vim.keymap.set('n', '<C-h>', require('smart-splits').move_cursor_left)
 vim.keymap.set('n', '<C-j>', require('smart-splits').move_cursor_down)
 vim.keymap.set('n', '<C-k>', require('smart-splits').move_cursor_up)
