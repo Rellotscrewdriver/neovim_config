@@ -55,6 +55,7 @@ require("project_nvim").setup {
   datapath = vim.fn.stdpath("data"),
 }
 
+require('Comment').setup()
 
 require('telescope').load_extension('projects')
 
@@ -94,3 +95,10 @@ require('session_manager').setup({
   autosave_only_in_session = false, -- Always autosaves session. If true, only autosaves after a session is active.
   max_path_length = 80,  -- Shorten the display path if length exceeds this threshold. Use 0 if don't want to shorten the path at all.
 })
+
+local status_ok, impatient = pcall(require, "impatient")
+if not status_ok then
+  return
+end
+
+impatient.enable_profile()

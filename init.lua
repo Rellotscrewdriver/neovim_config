@@ -1,14 +1,3 @@
-_G.__luacache_config = {
-  chunks = {
-    enable = true,
-    path = vim.fn.stdpath('cache')..'/luacache_chunks',
-  },
-  modpaths = {
-    enable = true,
-    path = vim.fn.stdpath('cache')..'/luacache_modpaths',
-  }
-}
-require('impatient')
 --starting entry
 local confPlug_files = {
   "theme.lua",
@@ -38,6 +27,15 @@ local source_files = function(conf_table, conf_path)
     vim.cmd(source_cmd)
   end
 end
+
+local packer = require("packer")
+packer.init {
+  display = {
+    open_fn = function()
+      return require("packer.util").float { border = "rounded" }
+    end,
+  },
+}
 
 require('packer').startup({function()
   -- plugins here
@@ -72,6 +70,7 @@ require('packer').startup({function()
   use 'andweeb/presence.nvim'
   use {'glepnir/galaxyline.nvim', branch = 'main', requires = { 'nvim-tree/nvim-web-devicons'}}
   use 'windwp/nvim-autopairs'
+  
   -- Themes
   use "Shatur/neovim-session-manager"
   use { "catppuccin/nvim", as = "catppuccin" }
@@ -87,11 +86,7 @@ require('packer').startup({function()
         end,
       }
 end,
-config = {
-  display = {
-    open_fn = require('packer.util').float,
-  }
-}})
+})
 
 source_files(confPlug_files, "%s/configPlug/%s")
 source_files(confcore_files, "%s/core/%s")
