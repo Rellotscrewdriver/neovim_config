@@ -86,7 +86,7 @@ local buttons = {
     button("f", "  Search                          ", ":Telescope find_files<CR>"),
     button("e", "  Create                          ", ":ene <BAR> startinsert<CR>"),
     button("w", "  Projects                        ", "<cmd>lua require'telescope'.extensions.projects.projects{}<CR>"),
-    button("p", "  Update                          ", ":PackerSync<CR>"),
+    button("p", "  Update                          ", ":PackerSync<CR>"),
     button("s", "  Settings                        " , ":e ~/.config/nvim/<CR>"),
     button("q", "  Quit Neovim                     ", ":qa!<CR>"),
   },
@@ -109,7 +109,7 @@ local function stats()
     local opt, start = require('packer.plugin_utils').list_installed_plugins()
     local total_plugins = get_table_size(opt) + get_table_size(start)
     local datetime = os.date "%d:%m:%Y"
-    local plugins_text = "   "
+    local plugins_text = "   "
       .. total_plugins
       .. " plugins"
       .. "   v"
@@ -118,7 +118,7 @@ local function stats()
       .. vim.version().minor
       .. "."
       .. vim.version().patch
-      .. "   "
+      .. "   "
       .. datetime
     return plugins_text .. "\n"
 end
