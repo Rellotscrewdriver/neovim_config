@@ -51,12 +51,10 @@ require('packer').startup({function()
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   --autocompletion extra
-  use 'onsails/lspkind.nvim'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
   use 'jose-elias-alvarez/null-ls.nvim'
 
-  --use {'phaazon/mind.nvim', branch = 'v2.2', requires = 'nvim-lua/plenary.nvim'}
   use 'akinsho/toggleterm.nvim'
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
   use {'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = 'nvim-lua/plenary.nvim'}
