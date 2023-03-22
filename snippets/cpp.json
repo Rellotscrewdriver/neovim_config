@@ -2,7 +2,7 @@
   "for": {
     "prefix": "for",
     "body": [
-      "for (${1:size_t} ${2:i} = ${3:0}; $2 < ${4:length}; $2++) {",
+      "for(${1:size_t} ${2:i} = ${3:0}; $2 < ${4:length}; $2++){",
       "\t$0",
       "}"
     ],
@@ -11,7 +11,7 @@
   "forr": {
     "prefix": "forr",
     "body": [
-      "for (${1:size_t} ${2:i} = ${3:length} - 1; $2 >= ${4:0}; $2--) {",
+      "for(${1:size_t} ${2:i} = ${3:length} - 1; $2 >= ${4:0}; $2--){",
       "\t$0",
       "}"
     ],
@@ -19,22 +19,30 @@
   },
   "do": {
     "prefix": "do",
-    "body": ["do", "{", "\t$0", "} while($1);"],
+    "body": [
+			"do{", 
+			"\t$0", 
+			"}while($1);"
+		],
     "description": "Code snippet for do...while loop"
   },
   "while": {
     "prefix": "while",
-    "body": ["while ($1)", "{", "\t$2", "}"],
+    "body": [
+			"while($1){", 
+			"\t$2", 
+			"}"
+		],
     "description": ""
   },
   "foreach": {
     "prefix": "foreach",
-    "body": ["for(${1:auto} ${2:var} : ${3:collection_to_loop})", "{", "\t$0", "}"],
+    "body": ["for(${1:auto} ${2:var} : ${3:collection_to_loop}){", "\t$0", "}"],
     "description": "Code snippet for range-based for loop (c++11) statement"
   },
   "if": {
     "prefix": "if",
-    "body": ["if ($1) {", "\t$0", "}"],
+    "body": ["if($1){", "\t$0", "}"],
     "description": "Code snippet for if statement"
   },
   "else": {
@@ -44,7 +52,7 @@
   },
   "else if": {
     "prefix": "else if",
-    "body": ["else if ($1) {", "\t$0", "}"],
+    "body": ["else if($1){", "\t$0", "}"],
     "description": "Code snippet for else-if statement"
   },
   "enum": {
@@ -60,26 +68,16 @@
   "class": {
     "prefix": "class",
     "body": [
-      "class ${1:MyClass}",
-      "{",
+      "class ${1:MyClass}{",
       "public:",
       "\t$1();",
-      "\t$1($1 &&) = default;",
-      "\t$1(const $1 &) = default;",
-      "\t$1 &operator=($1 &&) = default;",
-      "\t$1 &operator=(const $1 &) = default;",
       "\t~$1();",
-      "",
       "private:",
       "\t$2",
       "};",
-      "",
-      "$1::$1()",
-      "{",
+      "$1::$1(){",
       "}",
-      "",
-      "$1::~$1()",
-      "{",
+      "$1::~$1(){",
       "}"
     ],
     "description": "Code snippet for class"
@@ -243,8 +241,9 @@
   "Main function template": {
     "prefix": "main",
     "body": [
-      "int main (int argc, char *argv[])",
-      "{",
+			"#include <iostream>\n",
+			"using namespace std;\n",
+		  "int main(){",
       "\t$1",
       "\treturn 0;",
       "}"

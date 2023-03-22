@@ -1,6 +1,9 @@
 vim.opt.number = true
 vim.cmd[[colorscheme catppuccin-mocha]]
 vim.opt.tabstop = 2
+vim.opt.showmode = false
+vim.opt.cmdheight = 2
+vim.opt.laststatus = 3
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.ttyfast = true
