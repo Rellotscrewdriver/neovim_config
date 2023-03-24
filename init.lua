@@ -77,7 +77,7 @@ require('packer').startup({function()
   use 'numToStr/Comment.nvim'
   use 'mrjones2014/smart-splits.nvim'
   use 'famiu/bufdelete.nvim'
-  use "ahmedkhalf/project.nvim"
+  use "nvim-telescope/telescope-project.nvim"
   use {"p00f/nvim-ts-rainbow", after = "nvim-treesitter" }
   use {'nvim-treesitter/nvim-treesitter',
         run = function()
