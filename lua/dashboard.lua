@@ -1,6 +1,6 @@
 local present, alpha = pcall(require, "alpha")
 if not present then
-  return
+  return "Alpha has an error"
 end
 
 local header = {

@@ -211,4 +211,3 @@ require("neo-tree").setup({
           }
         }
       })
-
