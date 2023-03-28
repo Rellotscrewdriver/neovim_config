@@ -86,9 +86,9 @@ local buttons = {
     button("f", "  Search                          ", ":Telescope find_files<CR>"),
     button("e", "  Create                          ", ":ene <BAR> startinsert<CR>"),
     button("w", "  Projects                        ", "<cmd>lua require'telescope'.extensions.project.project{}<CR>"),
-    button("p", "  Update                          ", ":PackerSync<CR>"),
+    button("p", "  Update                          ", ":Lazy update<CR>"),
     button("s", "  Settings                        " , ":e ~/.config/nvim/<CR>"),
-    button("q", "  Quit Neovim                     ", ":qa!<CR>"),
+    button("q", "  Quit                            ", ":qa!<CR>"),
   },
   opts = {
     position = "center",
@@ -96,36 +96,39 @@ local buttons = {
   },
 }
 
-local function get_table_size(t)
-  local count = 0
-  for _, __ in pairs(t) do
-    count = count + 1
-  end
-  return count
-end
-
 local function stats()
     -- Number of plugins
-    local opt, start = require('packer.plugin_utils').list_installed_plugins()
-    local total_plugins = get_table_size(opt) + get_table_size(start)
-    local datetime = os.date "%d:%m:%Y"
-    local plugins_text = "   "
-      .. total_plugins
-      .. " plugins"
-      .. "   v"
+    local datetime = os.date(" %d-%m-%Y   %H:%M:%S")
+    local plugins_text = " v"
       .. vim.version().major
       .. "."
       .. vim.version().minor
       .. "."
       .. vim.version().patch
-      .. "   "
+      .. "  "
       .. datetime
     return plugins_text .. "\n"
 end
 
-local PlugStats = {
+local function plugstats()
+    local stats = require("lazy").stats()
+    local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+    return "⚡ Neovim loaded " .. stats.count .. " plugins in " .. ms .. "ms" .. "\n"
+end
+
+local Stats = {
   type = "text",
   val = stats,
+  opts = {
+    position = "center",
+    hl = "Function",
+  },
+}
+
+
+local Plugstats = {
+  type = "text",
+  val = plugstats,
   opts = {
     position = "center",
     hl = "Function",
@@ -135,7 +138,8 @@ local PlugStats = {
 local section = {
   header = header,
   buttons = buttons,
-  footer = PlugStats,
+  footer = Stats,
+  stats = Plugstats,
 }
 
 local opts = {
@@ -146,6 +150,8 @@ local opts = {
     section.footer,
     { type = "padding", val = 2 },
     section.buttons,
+    { type = "padding", val = 1 },
+    section.stats,
   },
   opts = {
     margin = 44,
@@ -153,3 +159,4 @@ local opts = {
 }
 
 alpha.setup(opts)
+
