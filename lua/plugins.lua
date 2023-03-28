@@ -7,7 +7,6 @@ return {
   {'hrsh7th/cmp-cmdline', lazy = false},
   {'saadparwaiz1/cmp_luasnip', lazy = true},
   {'L3MON4D3/LuaSnip', lazy = true},
-  {'jose-elias-alvarez/null-ls.nvim', lazy = true},
   {"glepnir/lspsaga.nvim", event = "LspAttach", dependencies = {{"nvim-tree/nvim-web-devicons"}, {"nvim-treesitter/nvim-treesitter"}}}, 
   {"folke/trouble.nvim", requires = "nvim-tree/nvim-web-devicons"},
 
@@ -22,7 +21,6 @@ return {
   {'lewis6991/gitsigns.nvim', lazy = true },
   'rcarriga/nvim-notify',
   {'dstein64/vim-startuptime', lazy = true},
-  {'simrat39/symbols-outline.nvim', lazy = true},
   {"nvim-neo-tree/neo-tree.nvim", branch = "v2.x", dependencies = {"nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim",}},
   'andweeb/presence.nvim',
   {'glepnir/galaxyline.nvim', branch = 'main', dependencies = { 'nvim-tree/nvim-web-devicons'}},
