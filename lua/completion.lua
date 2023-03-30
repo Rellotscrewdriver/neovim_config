@@ -32,6 +32,12 @@ local kind_icons = {
   TypeParameter = "",
 }
 
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticsSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
+
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -112,7 +118,8 @@ cmp.setup {
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 require('lspconfig')['clangd'].setup{}
-require('lspconfig')['pylsp'].setup {}
+require('lspconfig')['pylsp'].setup{}
+require('lspconfig')['cmake'].setup{}
 
 --lazy load snippets from snippets folder 
 require("luasnip.loaders.from_vscode").lazy_load({ paths = { "~/.config/nvim/snippets" } })
