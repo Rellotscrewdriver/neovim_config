@@ -34,6 +34,7 @@ return {
   {"p00f/nvim-ts-rainbow", lazy = true},
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate", lazy = true},
   --Please make sure you install markdown and markdown_inline parser
+  {"rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"}},
 }
 
 
