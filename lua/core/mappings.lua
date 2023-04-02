@@ -29,6 +29,24 @@ keymap('n', '<C-Down>', require('smart-splits').resize_down)
 keymap('n', '<C-Left>', require('smart-splits').resize_left)
 keymap('n', '<C-Right>', require('smart-splits').resize_right)
 
+--Find Files in a project
+keymap("n", "<F3>", ":Telescope find_files")
+
+--Find a string across the file 
+keymap("n", "<F3>", ":Telescope grep_string")
+
+--Show definitions in the current file
+keymap("n", "<F3>", ":TroubleToggle workspace_diagnostics")
+
+--Show references in the whole project
+keymap("n", "<F4>", ":TroubleToggle lsp_references")
+
+--Show definitions of an implementation
+keymap("n", "<leader>l", ":TroubleToggle lsp_definitions")
+
+--Run the single file quickly
+keymap("n", "<F8>", ":RunCode")
+
 -- Toggling lazygit instantly
 keymap("n", "<leader>lg", ":Lspsaga term_toggle lazygit<CR>")
 
@@ -103,7 +121,7 @@ keymap("n", "]E", function()
 end)
 
 -- Toggle outline
-keymap("n","<leader>o", "<cmd>Lspsaga outline<CR>")
+keymap("n","<F1>", "<cmd>Lspsaga outline<CR>")
 
 -- Hover Doc
 -- If there is no hover doc,
