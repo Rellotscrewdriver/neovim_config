@@ -4,15 +4,15 @@ local dap = require('dap')
 dap.adapters.cppdbg = {
   id = 'cppdbg',
   type = 'executable',
-  command = '/home/rellotscrewdriver/cpptools/extension/debugAdapters/bin/OpenDebugAD7',
+  command = '~/.local/share/nvim/Mason/bin/OpenDebugAD7',
 }
 
 dap.adapters.python = {
   type = 'executable';
-  command = '/home/rellotscrewdriver/virtualenvs/debugpy/bin/python';
+  command = '~/.local/share/nvim/mason/packages/debugpy/venv/bin';
   args = { '-m', 'debugpy.adapter' };
 }
-
+--
 --configurations go here
 dap.configurations.cpp = { {
     name = "Launch file",
