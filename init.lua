@@ -14,12 +14,12 @@ vim.opt.runtimepath:prepend(lazypath)
 
 require("lazy").setup("plugins", {
  defaults = { lazy = true },
- install = { colorscheme = { "catppuccin" } },
- checker = { enabled = true },
- change_detection = {
-  notify = true,
- },
+ install = { missing = true, colorscheme = { "catppuccin-mocha" } },
+ checker = { enabled = true, frequency = 2629800}, --checks for updates every month 
+ ui = { border = "single" },
+ change_detection = { notify = false },
  performance = {
+	cache = {enabled = true},
   rtp = {
    disabled_plugins = {
    "gzip",
@@ -50,16 +50,20 @@ require "plugins"
 require "theme"
 require "core.settings"
 require "core.icons"
-require "completion"
-require "window"
-require "ds"
+require "cmp.cmpaths"
+require "cmp.server"
+require "cmp.addcmpfeat"
+require "cmp.other"
+require "debugging"
+require "cmake"
+require "finder"
 require "dashboard"
 require "explorer"
+require "window"
 require "quickrun"
 require "statusline"
 require "discord"
 require "git"
-require "terminal"
 require "misc"
 require "core.mappings"
 require "core.autocommands"

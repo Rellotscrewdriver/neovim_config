@@ -1,16 +1,20 @@
-vim.opt.number = true
-vim.cmd[[colorscheme catppuccin-mocha]]
-vim.opt.tabstop = 2
-vim.opt.showmode = false
-vim.opt.cmdheight = 2
-vim.opt.laststatus = 3
-vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 2
-vim.opt.ttyfast = true
-vim.opt.cursorline = true
-vim.opt.termguicolors = true
+local opt = vim.opt
+local opto = vim.o
+
+opt.number = true
+opt.tabstop = 2
+opt.showmode = false
+opt.cmdheight = 2
+opt.laststatus = 3
+opt.shiftwidth = 2
+opt.softtabstop = 2
+opt.ttyfast = true
+opt.cursorline = true
+opt.termguicolors = true
+
+opto.updatetime = 300
+opto.incsearch = false
+opto.signcolumn = 'yes'
+
 vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-vim.o.updatetime = 300
-vim.o.incsearch = false
-vim.wo.signcolumn = 'yes'
-vim.cmd([[set ttyfast]])
+vim.cmd[[colorscheme catppuccin-mocha]]

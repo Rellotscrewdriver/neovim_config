@@ -1,30 +1,45 @@
 local keymap = vim.keymap.set
 
+-- Swtiching between buffers
 keymap("n", "<S-h>", ":bprevious<CR>")
 keymap("n", "<S-l>", ":bnext<CR>")
+
+-- See all the buffers
 keymap("n", "b", ":Telescope buffers<CR>")
 keymap("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>")
 
+-- Delele buffers without screwing my layout for the nth time
 keymap("n", "fd", ":lua require('bufdelete').bufdelete(0, true)<CR>")
+
+-- See the projects
 keymap("n", "<F2>" ,":lua require'telescope'.extensions.project.project{}<CR>")
-keymap("n", "<F1>", ":SymbolsOutline<CR>")
-keymap("n", "<leader>t", ":ToggleTerm<CR>")
+
+-- Close a window/split
 keymap("n", "<leader>q", ":q!<CR>")
+
+-- Moving between windows
 keymap('n', '<C-h>', require('smart-splits').move_cursor_left)
 keymap('n', '<C-j>', require('smart-splits').move_cursor_down)
 keymap('n', '<C-k>', require('smart-splits').move_cursor_up)
 keymap('n', '<C-l>', require('smart-splits').move_cursor_right)
+
+-- Resizing windows
 keymap('n', '<C-Up>', require('smart-splits').resize_up)
 keymap('n', '<C-Down>', require('smart-splits').resize_down)
 keymap('n', '<C-Left>', require('smart-splits').resize_left)
 keymap('n', '<C-Right>', require('smart-splits').resize_right)
-keymap("n", "<leader>lg", "<cmd>lua _lazygit_toggle()<CR>")
-keymap("n", "<leader>g", "<cmd>lua _gdb_toggle()<CR>")
-keymap("n", "f", ":Neotree toggle<CR>")
-keymap("n", "<C-g>", ":Neotree git_status<CR>")
-keymap("n", "qa", ":qa!<CR>")
 
---autocompletion
+-- Toggling lazygit instantly
+keymap("n", "<leader>lg", ":Lspsaga term_toggle lazygit<CR>")
+
+-- Toggling file explorer
+keymap("n", "f", ":Neotree toggle<CR>")
+
+-- See the git status inside neovim
+keymap("n", "<C-g>", ":Neotree git_status<CR>")
+
+-- closing all the windows
+keymap("n", "qa", ":qa!<CR>")
 
 -- LSP finder - Find the symbol's definition
 -- If there is no definition, it will instead be hidden
@@ -110,4 +125,32 @@ keymap("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
 keymap("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>")
 
 -- Floating terminal
-keymap({"n", "t"}, "<A-d>", "<cmd>Lspsaga term_toggle<CR>")
+keymap({"n", "t"}, "<leader>t", "<cmd>Lspsaga term_toggle<CR>")
+
+-- debugging ui toggle  
+keymap('n', '<F6>', function() require("dapui").toggle() end)
+
+-- other debugging commands yet to be sorted
+keymap('n', '<F5>', function() require('dap').continue() end)
+keymap('n', '<F10>', function() require('dap').step_over() end)
+keymap('n', '<F9>', function() require('dap').step_into() end)
+keymap('n', '<F12>', function() require('dap').step_out() end)
+keymap('n', '<Leader>b', function() require('dap').toggle_breakpoint() end)
+keymap('n', '<Leader>B', function() require('dap').set_breakpoint() end)
+keymap('n', '<Leader>lp', function() require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
+keymap('n', '<Leader>dr', function() require('dap').repl.open() end)
+keymap('n', '<Leader>dl', function() require('dap').run_last() end)
+keymap({'n', 'v'}, '<Leader>dh', function()
+  require('dap.ui.widgets').hover()
+end)
+keymap({'n', 'v'}, '<Leader>dp', function()
+  require('dap.ui.widgets').preview()
+end)
+keymap('n', '<Leader>df', function()
+  local widgets = require('dap.ui.widgets')
+  widgets.centered_float(widgets.frames)
+end)
+keymap('n', '<Leader>ds', function()
+  local widgets = require('dap.ui.widgets')
+  widgets.centered_float(widgets.scopes)
+end)

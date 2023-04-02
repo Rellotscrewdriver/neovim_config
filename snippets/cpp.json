@@ -82,21 +82,7 @@
     ],
     "description": "Code snippet for class"
   },
-  "eclass": {
-    "prefix": "eclass",
-    "body": [
-      "class ${1:MyClass}",
-      "{",
-      "public:",
-      "\t$2",
-      "private:",
-      "\t$3",
-      "};",
-      ""
-    ],
-    "description": "Code snippet for empty class"
-  },
-  "qclass": {
+ "qclass": {
     "prefix": "qclass",
     "body": [
       "class ${1:MyClass} : public QObject",
@@ -241,8 +227,9 @@
   "Main function template": {
     "prefix": "main",
     "body": [
-			"#include <iostream>\n",
-			"using namespace std;\n",
+			"#include <iostream>",
+			"using namespace std;",
+			"",
 		  "int main(){",
       "\t$1",
       "\treturn 0;",
