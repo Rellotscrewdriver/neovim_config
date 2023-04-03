@@ -11,7 +11,7 @@ return {
   -- for additional features like outline, hovering docs and what not
 	{"glepnir/lspsaga.nvim", event = "LspAttach", dependencies = {{"nvim-tree/nvim-web-devicons"}, {"nvim-treesitter/nvim-treesitter"}}}, 
   {"folke/trouble.nvim", requires = "nvim-tree/nvim-web-devicons"}, --for summarising elements in the code
-  {"williamboman/mason.nvim", build = ":MasonInstall cpplint lua-language-server" }, --portable server manager 
+  {"williamboman/mason.nvim"}, --portable server manager 
   {"nvim-lua/plenary.nvim", lazy = true},
 	--for showing windows in neovim
   {'akinsho/bufferline.nvim', commit = "b337fd393cef2e3679689d220e2628722c20ddcb", dependencies = 'nvim-tree/nvim-web-devicons', lazy = true},
@@ -38,7 +38,7 @@ return {
   {"nvim-telescope/telescope-project.nvim", lazy = true}, --for managing projects easily
   {"p00f/nvim-ts-rainbow", lazy = true}, --uhh, for cool braces?
 	--for cool looking braces
-  {"nvim-treesitter/nvim-treesitter", build = ":TSinstall cpp cmake make python markdown markdown_inline lua", lazy = true},
+  {"nvim-treesitter/nvim-treesitter", lazy = true},
 	--for debugging
   {"rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"}, lazy = true},
 }
