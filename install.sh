@@ -1,46 +1,36 @@
-NVIM_DIR=/usr/bin/nvim
 NVIM_CONFIG_DIR=~/.config/nvim
+NVIM_LOCAL_DIR=~/.local/share/fonts 
+NERD_FONT_DIR=~/DejaVuSansMono.zip
 
-set -e
+set -e #terminate the script if anything errors out
 
-# check whether python, pip and neovim are installed
-if [[ -z "$(command -v rg)" ]] && [[ ! -f "usr/bin/g" ]]; then
-    echo "Please install ripgrep from your package manager"
-fi
-
+# check whether neovim is installed
 if [[ -z "$(command -v nvim)" ]] && [[ ! -f "usr/bin/nvim" ]]; then
     echo "Please install neovim from your package manager"
 fi
 
-if [[ -z "$(command -v pip)" ]] && [[ ! -f "usr/bin/pip" ]]; then
-    echo "Please install python(including pip) from your package manager"
+# check whether ripgrep is installed
+if [[ -z "$(command -v rg)" ]] && [[ ! -f "usr/bin/rg" ]]; then
+    echo "Please install ripgrep from your package manager"
 fi
 
 echo -n "Copying config files to ~/.config/nvim"
-mkdir -p ~/.config/nvim
+mkdir -p $NVIM_CONFIG_DIR
 cp -r lua snippets init.lua $NVIM_CONFIG_DIR 
 echo "...done"
 
-echo -n "Installing nvim plugins, please wait"
-"$NVIM_DIR" nvim -es "Lazy install"
-echo "...done"
-
-echo -n "Installing and Compiling Tree-Sitter prasers"
-"$NVIM_DIR" nvim -es "TSinstall cpp cmake make markdown markdown-inline python"
-echo "...done"
-
 echo "Installing hack nerd font in your local directory"
-mkdir -p ~/.local/share/fonts 
+mkdir -p $NVIM_LOCAL_DIR
 if [ -f "~/DejaVuSansMono.zip" ]; then
     echo "font's already there, skip installing it"
 else
     echo "installing the required font from the internet, please wait if you do have internet connection"
-    wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/DejaVuSansMono.zip -O ~/DejaVuSansMono.zip
+    wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/DejaVuSansMono.zip -O $NERD_FONT_DIR
 fi
 
-unzip -j ~/DejaVuSansMono.zip "DejaVu Sans Mono Nerd Font Complete.ttf" -d ~/.local/share/fonts/
+unzip -j $NERD_FONT_DIR "DejaVu Sans Mono Nerd Font Complete.ttf" -d $NVIM_LOCAL_DIR
 fc-cache -f
-rm -f ~/DejaVuSansMono.zip
+rm -f $NERD_FONT_DIR
 
-echo "Finished installing the config and its plugin dependencies!"
+echo "Finished installing the config and the font!"
 echo "make sure to restart the terminal to see the nerd icons"

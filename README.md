@@ -1,20 +1,23 @@
-# Introduction
+# My Neovim Configuration(or my rice)
 
 Hello! This is my personal neovim configuration for Linux with various plugins configured. it evolves as I learn more about neovim and become more proficient in using neovim. <br />
 I wouldn't recommend cloning this repo and replace your own config, especially on other platforms since it is being made in mind with linux <br />
 Good configurations are personal, built over time with a lot of polish.
 
-# Setup
+## Prerequisites:
+install these applications from your package manager
+* neovim(obviously)
+* ripgrep(for fuzzy finding)
 
-Requirements:
-* neovim(obiously)
-* ripgrep (for fuzzy finding)
-* python (for pip to install language-servers)
-* clangd (for C++ server)
+## Installation instructions
+* execute install.sh to install it on linux(untested on other platforms)
+this will copy the files and install the nerd font.
+* restart your terminal(don't open a new tab)
+* run `nvim`, it should pop up the lazy plguin installing all of the plugins
+* type `TSinstall [rust] [go]` to install syntax hightlighting
+* type `Mason` to find and install language servers and see [server configuration.md](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md) on how to setup language server. the settings should go in lua/cmp/servers.lua
 
-Just run install.sh to install it on linux(untested on other platforms)
-
-# Plugins
+## Plugins
 <details><summary><b>List of plugins</b></summary>
 
 | Plugin            | Usage          |
@@ -34,28 +37,29 @@ Just run install.sh to install it on linux(untested on other platforms)
 | [nvim-notify](https://github.com/rcarriga/nvim-notify) | GUI notifications |
 | [startuptime](https://github.com/dstein64/vim-startuptime) | checking startuptime|
 | [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim) | | 
+
 aand many more!(you can just look at init.lua to see all the plugins)
 </details>
 
 
-# UI Demo
+## UI Demo
 <details><summary><b>UI Demos(will eat a lot of CPU)</b></summary>
 
 For more UI demos, check [here](https://github.com/Rellotscrewdriver/nvim/issues/1).
 
-## Start screen with alpha-nvim
+### Start screen with alpha-nvim
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/50903223/229297763-642e636d-bc05-4762-9550-19adb562580d.png" width="800">
 </p>
 
-## Code autocompletion with nvim-cmp
+### Code autocompletion with nvim-cmp
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/50903223/229297755-bcd88e3c-c05b-46b0-a643-e6eedb36913e.png" width="800">
 </p>
 
-## Tags with LSP Saga 
+### Tags with LSP Saga 
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/50903223/229297762-ed1edcf0-66a5-4db4-b75c-dce1ea0d03f4.png" width="800">
@@ -69,24 +73,24 @@ For more UI demos, check [here](https://github.com/Rellotscrewdriver/nvim/issues
 
 </details>
 
-# Contributing
+## Contributing
 
-If you find anything that needs improving, do not hesitate to point it out or create a PR.
+If you find anything that needs improvement, do not hesitate to point it out or create a PR.
 If you still have an issue, [open a new issue](https://github.com/rellotscrewdriver/nvim/issues).
 
-# Credits
+## Credits
 
 * [jdhao](https://github.com/jdhao/nvim-config) for inspiration to restart my neovim configuration from scratch
 * [dtr2300](https://github.com/dtr2300/nvim) 
 * [alpha2phi](https://github.com/alpha2phi/neovim-for-beginner) for some noob tips and recommendations
 * [Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch)
 
-## Other Configs
+### Other Configs
 
 * [Johan-Palacios](https://github.com/Johan-Palacios/nvim)
 * [emxxjnm](https://github.com/emxxjnm/nvim)
 
-# Further readings
+## Further readings
 - https://github.com/rockerBOO/awesome-neovim
 - https://this-week-in-neovim.org/
 - https://github.com/nanotee/nvim-lua-guide
