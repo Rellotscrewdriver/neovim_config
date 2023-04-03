@@ -13,7 +13,17 @@ require('smart-splits').setup()
 
 require('nvim-autopairs').setup()
 
-require("mason").setup()
+require("mason").setup({
+ui = {
+  -- The border to use for the UI window. Accepts same border values as |nvim_open_win()|.
+  border = "single",
+  icons = {
+    package_installed = "✓",
+    package_pending = "➜",
+    package_uninstalled = "✗"
+  },
+},
+})
 
 local status_ok, impatient = pcall(require, "impatient")
 if not status_ok then
