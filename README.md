@@ -36,7 +36,7 @@ this will copy the files and install the nerd font.
 | [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) | for git integration|
 | [nvim-notify](https://github.com/rcarriga/nvim-notify) | GUI notifications |
 | [startuptime](https://github.com/dstein64/vim-startuptime) | checking startuptime|
-| [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim) | | 
+| [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim) | File explorer | 
 
 aand many more!(you can just look at init.lua to see all the plugins)
 </details>

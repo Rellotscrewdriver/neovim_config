@@ -23,7 +23,6 @@ return {
   {'Civitasv/cmake-tools.nvim', lazy = true}, --Manage a cmake project
   {'lewis6991/gitsigns.nvim', lazy = true }, --OOBE git
   'rcarriga/nvim-notify', --Show notifications
-  {'dstein64/vim-startuptime', lazy = true},--see the startuptime of neovim in detail
 	--File explorer
   {"nvim-neo-tree/neo-tree.nvim", branch = "v2.x", dependencies = {"nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim",}},
 	--for showing up neovim on Discord Rich Presence
@@ -31,7 +30,10 @@ return {
   {'glepnir/galaxyline.nvim', branch = 'main', dependencies = { 'nvim-tree/nvim-web-devicons'}}, --statusline
   {'windwp/nvim-autopairs', lazy = true}, --quickly put curly braces, brackets on both sides
   {"Shatur/neovim-session-manager", lazy = true}, --for managing sessions
-  {"catppuccin/nvim", name = "catppuccin" }, --colorscheme(mocha)
+  --Themes to be used in neovim
+  {"catppuccin/nvim", name = "catppuccin", lazy = true},
+  {"folke/tokyonight.nvim", lazy = true},
+  {"EdenEast/nightfox.nvim", lazy = true},
   {'numToStr/Comment.nvim', lazy = true}, --Commenting out line easily
   'mrjones2014/smart-splits.nvim', --managing windows and resize them as needed
   {'famiu/bufdelete.nvim', lazy = true}, --for deleting buffers effectively
