@@ -30,22 +30,22 @@ keymap('n', '<C-Left>', require('smart-splits').resize_left)
 keymap('n', '<C-Right>', require('smart-splits').resize_right)
 
 --Find Files in a project
-keymap("n", "<F3>", ":Telescope find_files")
+keymap("n", "<F3>", ":Telescope find_files<CR>")
 
 --Find a string across the file 
-keymap("n", "<F3>", ":Telescope grep_string")
+keymap("n", "<F3>", ":Telescope grep_string<CR>")
 
 --Show definitions in the current file
-keymap("n", "<F3>", ":TroubleToggle workspace_diagnostics")
+keymap("n", "<F3>", ":TroubleToggle workspace_diagnostics<CR>")
 
 --Show references in the whole project
-keymap("n", "<F4>", ":TroubleToggle lsp_references")
+keymap("n", "<F4>", ":TroubleToggle lsp_references<CR>")
 
 --Show definitions of an implementation
-keymap("n", "<leader>l", ":TroubleToggle lsp_definitions")
+keymap("n", "<leader>l", ":TroubleToggle lsp_definitions<CR>")
 
 --Run the single file quickly
-keymap("n", "<F8>", ":RunCode")
+keymap("n", "<F8>", ":RunCode<CR>")
 
 -- Toggling lazygit instantly
 keymap("n", "<leader>lg", ":Lspsaga term_toggle lazygit<CR>")
