@@ -1,175 +1,129 @@
-local gl = require('galaxyline')
-local colors = require('galaxyline.theme').default
-local condition = require('galaxyline.condition')
-local gls = gl.section
-local bg_color = vim.fn.synIDattr(vim.fn.hlID('Statusline'),'bg')
+local lualine = require('lualine')
 
-local mode_map = {
-  ['n'] = {'NORMAL', "#B8CC52"},
-  ['i'] = {'INSERT', '#36A3D9'},
-  ['R'] = {'REPLACE','#F07178'},
-  ['v'] = {'VISUAL', '#E6B673'},
-  ['V'] = {'V-LINE', '#E6B673'},
-  ['c'] = {'COMMAND', '#FF7733'},
-  ['s'] = {'SELECT', '#E6B673'},
-  ['S'] = {'S-LINE', '#E6B673'},
-  ['t'] = {'TERMINAL', '#95E6CB'},
-  [''] = {'V-BLOCK', '#E6B673'},
-  [''] = {'S-BLOCK', '#E6B673'},
-  ['Rv'] = {'VIRTUAL'},
-  ['rm'] = {'--MORE'},
+local colors = {
+  bg       = '#202328',
+  fg       = '#bbc2cf',
+  yellow   = '#ECBE7B',
+  cyan     = '#008080',
+  darkblue = '#081633',
+  green    = '#98be65',
+  orange   = '#FF8800',
+  violet   = '#a9a1e1',
+  magenta  = '#c678dd',
+  blue     = '#51afef',
+  red      = '#ec5f67',
 }
 
-local sep = {
-  right_filled = '',
-  left_filled = ' ',
+local conditions = {
+  buffer_not_empty = function()
+    return vim.fn.empty(vim.fn.expand('%:t')) ~= 1
+  end,
+  hide_in_width = function()
+    return vim.fn.winwidth(0) > 80
+  end,
+  check_git_workspace = function()
+    local filepath = vim.fn.expand('%:p:h')
+    local gitdir = vim.fn.finddir('.git', filepath .. ';')
+    return gitdir and #gitdir > 0 and #gitdir < #filepath
+  end,
 }
 
-local function mode_label() return mode_map[vim.fn.mode()][1] or 'N/A' end
-local function mode_hl() return mode_map[vim.fn.mode()][2] or 'NONE' end
+-- Config
+local config = {
+  options = {
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+    theme = 'auto'
+  },
+  sections = {
+    -- the elements are added here for the dynamic higlighting effect
+    lualine_a = {'mode'},
+    lualine_b = {'branch'},
+    lualine_y = {{'location', padding = {right = 1, left = 0}}},
+    lualine_z = {{'datetime', style = '%H:%M', icon = '', separator = {left = ''}, padding = { right = 1 }},
+  },
+    -- These will be filled later
+    lualine_c = {},
+    lualine_x = {},
+  },
+  inactive_sections = {
+    -- these are to remove the defaults
+    lualine_a = {},
+    lualine_b = {},
+    lualine_y = {},
+    lualine_z = {},
+    lualine_c = {},
+    lualine_x = {},
+  },
+}
 
-local buffer_not_empty = function()
-  if vim.fn.empty(vim.fn.expand('%:t')) ~= 1 then
-    return true
-  end
-  return false
+-- Inserts a component in lualine_c at left section
+local function ins_left(component)
+  table.insert(config.sections.lualine_c, component)
 end
 
-gls.left[2] = {
-    ViMode = {
-      provider = function()
-        vim.cmd('highlight GalaxyViMode guifg=' .. bg_color .. ' guibg=' ..
-                  mode_hl() .. ' gui=bold')
-        vim.cmd('highlight GalaxyViModeInv guifg=' .. mode_hl() .. ' guibg=' ..
-                  bg_color .. ' gui=bold')
-        return string.format('  %s ', mode_label())
-      end,
-      separator = sep.left_filled,
-      separator_highlight = 'GalaxyViModeInv',
-    },
+-- Inserts a component in lualine_x at right section
+local function ins_right(component)
+  table.insert(config.sections.lualine_x, component)
+end
+
+ins_left {
+  'diff',
+  symbols = { added = ' ', modified = ' ', removed = ' ' },
+  separator = {left = '', right = ''},
+  diff_color = {
+    added = { fg = colors.green },
+    modified = { fg = colors.orange },
+    removed = { fg = colors.red },
+  },
+  cond = conditions.hide_in_width,
 }
 
-gls.left[3] = {
-  GitIcon = {
-    provider = function() return ' ' end,
-    condition = condition.check_git_workspace,
-    highlight = {colors.violet,bg_color,'NONE'},
+-- Insert mid section. You can make any number of sections in neovim :)
+-- for lualine it's any number greater then 2
+ins_left {
+  function()
+    return '%='
+  end,
+  separator = {left = '', right = ''},
+}
+
+ins_left {
+  'filename',
+  cond = conditions.buffer_not_empty,
+  color = { fg = colors.magenta, gui = 'bold' },
+  separator = {left = '', right = ''},
+  file_status = false,
+  symbols = {
+    modified = '',     
+    readonly = '',      
+    unnamed = '[No Name]', 
+    newfile = '[New]',
   }
 }
 
-gls.left[4] = {
-  GitBranch = {
-    provider = 'GitBranch',
-		separator = ' ',
-    condition = condition.check_git_workspace,
-    highlight = {colors.violet,bg_color,'bold'},
-  }
-}
-
-gls.left[5] = {
-  DiffAdd = {
-    provider = 'DiffAdd',
-    condition = condition.hide_in_width,
-    icon = ' ',
-    highlight = {colors.green, bg_color},
-  }
-}
-gls.left[6] = {
-  DiffModified = {
-    provider = 'DiffModified',
-    condition = condition.hide_in_width,
-    icon = ' ',
-    highlight = {colors.orange,bg_color},
-  }
-}
-
-gls.left[7] = {
-  DiffRemove = {
-    provider = 'DiffRemove',
-    condition = condition.hide_in_width,
-    icon = ' ',
-    highlight = {colors.red,bg_color},
-  }
-}
-
-gls.mid[1] ={
-  FileIcon = {
-    provider = 'FileIcon',
-    condition = condition.buffer_not_empty,
-    highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,bg_color},
+ins_left {
+  'diagnostics',
+  sources = { 'nvim_diagnostic' },
+  symbols = { error = ' ', warn = ' ', info = ' ', hint = '' },
+  diagnostics_color = {
+    color_error = { fg = colors.red },
+    color_warn = { fg = colors.yellow },
+    color_info = { fg = colors.cyan },
   },
 }
 
-gls.mid[2] = {
-  FileName = {
-    provider = 'FileName',
-    condition = condition.buffer_not_empty,
-    highlight = {colors.magenta,bg_color,'bold'}
-  }
+-- Add components to right sections
+ins_right {
+  'o:encoding',
+  fmt = string.upper,
+  cond = conditions.hide_in_width,
+  color = { fg = colors.green, gui = 'bold' },
 }
 
-gls.mid[3] = {
-  DiagnosticError = {
-    provider = 'DiagnosticError',
-    icon = '  ',
-    highlight = {colors.red,bg_color}
-  }
+ins_right {
+  'filetype'
 }
 
-gls.mid[4] = {
-  DiagnosticWarn = {
-    provider = 'DiagnosticWarn',
-    icon = '  ',
-    highlight = {colors.yellow,bg_color},
-  }
-}
-
-gls.mid[5] = {
-  DiagnosticHint = {
-    provider = 'DiagnosticHint',
-    icon = '  ',
-    highlight = {colors.cyan,bg_color},
-  }
-}
-
-gls.mid[6] = {
-  DiagnosticInfo = {
-    provider = 'DiagnosticInfo',
-    icon = '  ',
-    highlight = {colors.blue,bg_color},
-  }
-}
-
-gls.right[1] = {
-  FileEncode = {
-    provider = 'FileEncode',
-    condition = condition.hide_in_width,
-    separator_highlight = {'NONE',bg_color},
-    highlight = {colors.green,bg_color,'bold'}
-  }
-}
-
-gls.right[3] = {
-  LineInfo = {
-    provider = 'LineColumn',
-    separator = ' ',
-    separator_highlight = {'NONE',bg_color},
-    highlight = {colors.fg,bg_color},
-  },
-}
-
-gls.right[4] = {
-  PerCent = {
-    provider = 'LinePercent',
-    separator = ' ',
-    separator_highlight = {'#181825',bg_color},
-    highlight = {colors.fg,bg_color,'bold'},
-  }
-}
-
-gls.right[5] = {
-  RainbowBlue = {
-    provider = function() return ' ▊' end,
-    highlight = {colors.cyan,bg_color}
-  },
-}
+-- Now don't forget to initialize lualine
+lualine.setup(config)

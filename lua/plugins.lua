@@ -27,7 +27,7 @@ return {
   {"nvim-neo-tree/neo-tree.nvim", branch = "v2.x", dependencies = {"nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim",}},
 	--for showing up neovim on Discord Rich Presence
 	{'andweeb/presence.nvim', lazy = true},
-  {'glepnir/galaxyline.nvim', branch = 'main', dependencies = { 'nvim-tree/nvim-web-devicons'}}, --statusline
+  {'nvim-lualine/lualine.nvim', lazy = true}, --statusline
   {'windwp/nvim-autopairs', lazy = true}, --quickly put curly braces, brackets on both sides
   {"Shatur/neovim-session-manager", lazy = true}, --for managing sessions
   --Themes to be used in neovim
