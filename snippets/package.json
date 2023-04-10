@@ -22,13 +22,6 @@
         ],
         "path": "./make.json"
       },
-
-			{
-				"language": [
-					"py"
-				],
-				"path": "./python.json"
-			}
     ]
   }
 }
