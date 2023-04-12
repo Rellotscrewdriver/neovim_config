@@ -42,33 +42,39 @@ aand many more!(you can just look at init.lua to see all the plugins)
 </details>
 
 
-## UI Demo
-<details><summary><b>UI Demos(will eat a lot of CPU)</b></summary>
+## Preview
+<details><summary><b>UI Demos</b></summary>
 
 For more UI demos, check [here](https://github.com/Rellotscrewdriver/nvim/issues/1).
 
 ### Start screen with alpha-nvim
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/50903223/229297763-642e636d-bc05-4762-9550-19adb562580d.png" width="800">
+<img src="https://user-images.githubusercontent.com/50903223/231488139-3ae65662-a0b5-4ae9-aab8-021dc8dcc451.png" width="800">
 </p>
 
 ### Code autocompletion with nvim-cmp
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/50903223/229297755-bcd88e3c-c05b-46b0-a643-e6eedb36913e.png" width="800">
+<img src="https://user-images.githubusercontent.com/50903223/231488112-dba3fdfb-07a3-49c6-9226-ad666c88f0db.png" width="800">
 </p>
 
-### Tags with LSP Saga 
+### Error Diagnostics with LSP Saga 
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/50903223/229297762-ed1edcf0-66a5-4db4-b75c-dce1ea0d03f4.png" width="800">
+<img src="https://user-images.githubusercontent.com/50903223/231488158-fb3ad25f-71aa-49ae-a895-5c99f582a8ac.png" width="800">
 </p>
 
-## Code reference by LSP Saga
+### Debugging UI by nvim-dap-ui 
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/50903223/229297750-370d349e-6c5b-49b2-b8b0-300ea2a3442d.png" width="800">
+<img src="https://user-images.githubusercontent.com/50903223/231488098-6e6a5943-96af-450d-9b0c-404fbc6fa173.png" width="800">
+</p>
+
+### Code reference by LSP Saga
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/50903223/231488174-63a394c2-099b-4b1e-9adb-d0a39f511a00.png" width="800">
 </p>
 
 </details>
