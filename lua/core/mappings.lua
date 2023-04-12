@@ -79,7 +79,7 @@ keymap("n", "gr", "<cmd>Lspsaga rename ++project<CR>")
 -- It also supports open/vsplit/etc operations, do refer to "definition_action_keys"
 -- It also supports tagstack
 -- Use <C-t> to jump back
-keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
+keymap("n","<leader>gd", "<cmd>Lspsaga peek_definition<CR>")
 
 -- Go to definition
 keymap("n","gd", "<cmd>Lspsaga goto_definition<CR>")
@@ -149,6 +149,7 @@ keymap({"n", "t"}, "<leader>t", "<cmd>Lspsaga term_toggle<CR>")
 keymap('n', '<F6>', function() require("dapui").toggle() end)
 
 -- other debugging commands yet to be sorted
+keymap('n', '<F7>', function() require('dap').terminate() end) 
 keymap('n', '<F5>', function() require('dap').continue() end)
 keymap('n', '<F10>', function() require('dap').step_over() end)
 keymap('n', '<F9>', function() require('dap').step_into() end)
