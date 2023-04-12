@@ -38,7 +38,7 @@ this will copy the files and install the nerd font.
 | [startuptime](https://github.com/dstein64/vim-startuptime) | checking startuptime|
 | [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim) | File explorer | 
 
-aand many more!(you can just look at init.lua to see all the plugins)
+aand many more!(you can just look at lua/plugins.lua to see all the plugins)
 </details>
 
 
