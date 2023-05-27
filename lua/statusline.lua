@@ -32,7 +32,7 @@ local conditions = {
 local config = {
   options = {
     component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
     theme = 'auto'
   },
   sections = {
@@ -40,7 +40,7 @@ local config = {
     lualine_a = {'mode'},
     lualine_b = {'branch'},
     lualine_y = {{'location', padding = {right = 1, left = 0}}},
-    lualine_z = {{'datetime', style = '%H:%M', icon = '', separator = {left = ''}, padding = { right = 1 }},
+    lualine_z = {{'datetime', style = '%H:%M', icon = '', separator = {left = ''}, padding = { right = 1 }},
   },
     -- These will be filled later
     lualine_c = {},
